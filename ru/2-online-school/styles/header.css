@@ -1,0 +1,42 @@
+.header {
+	background-color: var(--color-bg-medium);
+}
+
+.header__wrap {	
+	padding: 40px 24px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__login {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+.header__mobile-menu-button {
+	background: none;
+	border: none;
+	display: none;
+}
+
+@media (max-width: 930px) {
+	.header__login {
+		display: none;
+	}
+
+	.header__mobile-menu-button {
+		display: block;
+	}
+}
+
+@media (max-width: 600px) {
+	.header__wrapper {
+		padding: 30px 24px;
+	}
+
+	.header__logo {
+		max-width: 174px;
+	}	
+}

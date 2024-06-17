@@ -1,0 +1,166 @@
+.blog-section {
+	padding: 100px 24px;
+}
+
+.section-header__top {
+	margin-bottom: 8px;
+
+	font-size: 18px;
+	line-height: 1.2em;
+	font-weight: 400;
+	color: var(--color-header-top);
+}
+
+.section-header__h2 {
+	margin-bottom: 32px;
+
+	font-size: 46px;
+	line-height: 1.2em;
+	font-weight: 400;
+}
+
+.blog-section__p {
+	margin-bottom: 32px;
+	max-width: 790px;
+}
+
+.blog-section__social-icons {
+	margin-bottom: 48px;
+}
+
+.blog-section__articles {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	gap: 32px;
+	justify-content: stretch;
+}
+
+.article-preview {
+	padding: 35px;
+	display: flex;
+	flex-flow: row wrap;
+	gap: 16px;
+	justify-content: space-between;
+
+	background-color: var(--color-bg-medium);
+	border-radius: 10px;
+}
+
+.article-preview__left {
+	flex-basis: 770px;
+}
+
+.article-preview__info {
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 32px;
+	margin-bottom: 12px;
+	align-items: center;
+
+	font-size: 16px;
+	line-height: 1.2em;
+	color: var(--color-text-secondary);
+}
+
+.article-preview__time {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 6px;
+}
+
+.article-preview__time::before {
+	content: "";
+	background: url(../images/calendar.svg);	
+
+	width: 24px;
+	height: 24px;
+	position: relative;
+	top: -2px;
+}
+
+.article-preview__views {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 6px;
+}
+
+.article-preview__views::before {
+	content: url(../images/eye.svg);
+	width: 24px;
+	height: 24px;
+}
+
+.article-preview__h3 {
+	margin-bottom: 12px;
+
+	font-size: 24px;
+	line-height: 1.2em;
+	font-weight: 700;
+}
+
+.article-preview__p {
+	font-size: 16px;
+	line-height: 1.5em;
+	font-weight: 400;
+}
+
+.article-preview__button {
+	min-width: 160px;
+	box-sizing: border-box;
+}
+
+.article-preview__button:hover {
+	background-color: var(--color-bg-light);
+}
+
+.blog-section__button {
+	margin-top: 16px;
+}
+
+@media (max-width: 600px) {
+	.blog-section {
+		padding: 48px 24px 32px;
+	}
+
+	.section-header__h2 {
+		margin-bottom: 24px;
+	
+		font-size: 34px;
+	}
+
+	.blog-section__p {
+		margin-bottom: 16px;
+	}
+
+	.blog-section__social-icons {
+		margin-bottom: 24px;
+	}
+
+	.blog-section__articles {
+		gap: 24px;
+	}
+
+	.article-preview {
+		padding: 24px 16px;
+	}
+
+	.article-preview__info {
+		font-size: 14px;
+	}
+
+	.article-preview__h3 {
+		font-size: 21px;
+	}
+
+	.article-preview__right {
+		flex-basis: 100%;
+	}
+
+	.blog-section__button {
+		margin-top: 0;
+		width: 100%;
+	}
+}

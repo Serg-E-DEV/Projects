@@ -1,0 +1,65 @@
+button {
+	cursor: pointer;
+
+	font-family: "Comfortaa", sans-serif;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 1.2em;
+}
+
+.button-icon {
+	width: 40px;
+	height: 40px;
+	
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.button {
+	padding-inline: 33px;
+	line-height: 40px;
+
+	font-size: 13px;
+	color: var(--color-blue-dark);
+
+	background-color: var(--color-button);
+	border-radius: var(--radius-9);	
+}
+
+.button:hover {
+	filter: contrast(0.9);
+}
+
+input[type="text"],
+input[type="number"] {
+	width: 100%;
+	font-family: "Comfortaa", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.2em;
+}
+
+.input {
+	height: 40px;
+	padding-left: 20px;
+	padding-right: 10px;
+
+	border: 1px solid var(--color-border-light-1);
+	border-radius: var(--radius-9);
+	/* outline-color: var(--color-blue-hover); */
+}
+
+.input_icon {
+	padding-left: 48px;
+
+	background: url(../images/message.svg) 20px center no-repeat;
+}
+
+.input::placeholder {
+	color: var(--color-text-grey-light);
+}
+
+.input_error {
+	border: 1px solid var(--color-red);
+	outline-color: var(--color-red);
+}

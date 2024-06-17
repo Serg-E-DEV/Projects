@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+	<title>Habbit Traker</title>
+	<link rel="stylesheet" href="./styles/main.css?2">
+	<link rel="stylesheet" href="./styles/form.css">
+</head>
+<body>
+	<div class="app">
+		<aside class="panel">			
+			<img class="logo" src="./images/logo.svg" alt="Habbit Tracker">
+			<nav class="menu">
+				<div class="menu__list"></div>
+				<button class="menu__add" onclick="togglePopup(event)" menuAdd>
+					<img src="./images/add.svg" alt="Добавить привычку">
+				</button>
+			</nav>
+		</aside>
+		<div class="main">
+			<div class="header__wrap">
+				<header class="header">
+					<h1 class="header__h1"></h1>
+					<section class="progress">
+						<div class="progress__header">
+							<div class="progress__title">Прогресс <span class="progress__target"></span></div>
+							<div class="progress__count">0%</div>
+						</div>
+						<div class="progress-bar">
+							<div class="progress-bar__line" style="width: 0%;"></div>
+						</div>
+					</section>
+				</header>
+			</div>
+			<main class="content">
+				<div class="content__reports"></div>
+				<form class="report__form" onsubmit="addDay(event)">
+					<div class="report">
+						<div class="report__day" addDayNum></div>
+							<div class="report__description">
+								<input 
+									class="input input_icon" 
+									type="text" 
+									placeholder="Комментарий" 
+									name="comment"
+									onkeyup="removeErrorBorder(event)"
+								>
+							</div>
+							<div class="report__right">
+								<button class="button" title="Добавить запись">Готово</button>
+							</div>
+					</div>
+				</form>
+			</main>
+			<div class="controls">
+				<a 
+					class="control__change hidden" 
+					href="#" 
+					onclick="togglePopup(event)" 
+					changeHabit=""
+				>
+					Изменить привычку
+				</a>
+
+				<a 
+					class ="control__remove" 
+					href="#" onclick="removeHabit(event)" 
+					removeHabit=""
+				>
+					Удалить привычку
+				</a>
+
+				<a 
+					class="control__fillDemoData hidden" 
+					href="#" 
+					onclick="fillDemoData(event)" 
+					fillDemoData=""
+				>
+					Заполнить демоданными
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="popup__cover hidden" popup>
+		<div class="popup">
+			<h2 class="popup__h2">Добавить привычку</h2>
+			<div class="popup__h3" popupTitle>Выберите иконку</div>
+			<div class="popup__icons" popupIcons></div>
+			<form class="popup__form" action="" onsubmit="addHabit(event)" popupForm>
+				<input type="hidden" name="habitIcon" value="">
+				<input 
+					class="input popup__input" 
+					type="text" 
+					value=""
+					placeholder="Название" 
+					name="habitName"
+					onkeyup="removeErrorBorder(event)"
+				>
+				<input 
+					class="input popup__input" 
+					type="number"
+					min="1"
+					max="1000"
+					value=""
+					placeholder="Цель (число дней)"
+					name="habitTarget"
+					onkeyup="removeErrorBorder(event)"
+				>
+				<button class="button" title="Добавить запись">Готово</button>
+			</form>
+			<button 
+				class="popup__close button-icon" 
+				onclick="togglePopup(event)" 
+				popup-close>
+			</button>
+		</div>
+	</div>
+	<script src="./scripts/app.js?"></script>
+</body>
+</html>
